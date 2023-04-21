@@ -1,0 +1,279 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDashbaord"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/bg_rounded_corner"
+            app:cardBackgroundColor="@color/light_blue"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/baseline_more_horiz_24"
+                    android:tint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgStudent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/child"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="David Bord"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toTopOf="@+id/imgStudent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="Title: Flying Bings"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLength="3"
+                        android:text="123"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="Ranking"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewRank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                    app:layout_constraintStart_toEndOf="@+id/guidelineStart">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintPopularly"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLikely"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewPopularNumber"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="123"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_9sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewPopular"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Popularly"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtViewPopularNumber" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLikely"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintFollowed"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintPopularly"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewLikelyNumber"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:text="123"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_9sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewLikely"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Likely"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtViewLikelyNumber" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintFollowed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLikely"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewFollowedNumber"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:text="123"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_9sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtViewFollowed"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Followed"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtViewFollowedNumber" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.20" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.85" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.listdata.Data" />
+    </data>
+</layout>
